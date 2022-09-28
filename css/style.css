@@ -1,0 +1,17 @@
+header{
+    display: flex; /*Let the divs in line, side by side*/
+    justify-content: space-between; /*space between divs (left and right)*/
+    align-items: center; /*Align items to the center of the div*/
+    padding: 30px 0; /*Put a little space in the div height*/
+}
+
+/*Changing color of "Social Media Dashboard" title*/
+header .title-box .title{
+    color: var(--ColorDark)
+}
+
+/*Changing color and setting bold in subtitle*/
+header .title-box p{
+    color: var(--ColorDarkLight);
+    font-weight: 700;
+}
