@@ -1,4 +1,4 @@
-header{
+header {
     display: flex; /*Let the divs in line, side by side*/
     justify-content: space-between; /*space between divs (left and right)*/
     align-items: center; /*Align items to the center of the div*/
@@ -6,12 +6,45 @@ header{
 }
 
 /*Changing color of "Social Media Dashboard" title*/
-header .title-box .title{
+header .title-box .title {
     color: var(--ColorDark)
 }
 
 /*Changing color and setting bold in subtitle*/
-header .title-box p{
+header .title-box p {
     color: var(--ColorDarkLight);
     font-weight: 700;
+}
+
+/*Customizing the toggle part*/
+header .toggle-mode {
+    display: flex;
+    align-items: center;
+    color: var(--ColorDarkLight);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/*Setting the toggle button*/
+header .toggle-mode .btn-toggle {
+    -webkit-appearance: none; /*Removing button layout, eliminating the check box visual*/
+    width: 90px;
+    height: 40px;
+    border-radius: 50px; /*Making the border rounded*/
+    margin-left: 20px;
+    background: var(--ToggleBtnDark);
+    cursor: pointer; /*Setting mouse cursos as a hand while on the button*/
+    outline: 0; /*Removing the border line*/
+    position: relative; /*To set position to the little circle that will be inside the btn*/
+}
+
+/*Setting the toggle circle inside the toggle button*/
+header .toggle-mode .btn-toggle::before {
+    position: absolute; /*To set position inside in the toggle button*/
+    content: ''; /*Nothing will be added inside the circle*/
+    height: 40px;
+    width: 40px;
+    transform: scale(0.8); /*Setting the scale as 80% to reduce it size*/
+    border-radius: 50px; /*Making the border rounded*/
+    background: var(--BgLight);
 }
