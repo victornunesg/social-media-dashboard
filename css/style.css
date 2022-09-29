@@ -48,3 +48,52 @@ header .toggle-mode .btn-toggle::before {
     border-radius: 50px; /*Making the border rounded*/
     background: var(--BgLight);
 }
+
+main .followers {
+    display: grid; /*Using grid to make it easier align the cards*/
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*1fr is automatic, all cards will be using the same space*/
+    grid-gap: 30px; /*Defining space between cards*/
+}
+
+/*Setting style for all social media cards*/
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--BgLightCard);
+    position: relative; /*Same logic used in the toggle button*/
+}
+
+/*This pseud element will be the little top border of each social media card*/
+.card::before {
+    position: absolute;
+    content: '';
+    height: 5px;
+    border-radius: 8px 8px 0 0; /*Top left / Top Right / Bottom left / Bottom right*/
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.card.facebook::before {
+    background: var(--Facebook);
+}
+
+.card.twitter::before {
+    background: var(--Twitter);
+}
+
+.card.instagram::before {
+    background: var(--Instagram);
+}
+
+.card.youtube::before {
+    background: var(--YouTube);
+}
+
+.card .username {
+
+}

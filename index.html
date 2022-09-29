@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
@@ -9,14 +10,13 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
   
-
   <title>Frontend Mentor | Social Media Dashboard</title>
 
-
 </head>
-<body class="dark">
 
-  <div class="container">
+<body class="dark"> <!--This class named dark will be used when changing to the dark mode-->
+
+  <div class="container"> <!--Creating a container to put elements-->
 
     <header>
 
@@ -27,34 +27,84 @@
 
       <div class="toggle-mode">
         <span> Dark Mode </span>
-        <input type="checkbox" class="btn-toggle">
+        <input type="checkbox" class="btn-toggle"> <!-- This will be the swich button to change between light and dark mode-->
       </div>
 
     </header>
 
+    <main> <!--Main will also be inside the same container as header since it has the same margin and background configuration as defined in main.css file-->
+
+      <section class="followers"> <!--This section will display all the followers information, the first part of main-->
+
+        <article class="card facebook"> <!--First card (Facebook), all of the others follows the same structure-->
+          <span class="username">
+            <img src="./images/icon-facebook.svg">
+            @nathanf
+          </span>
+          <p class="count-followers">
+            <span>1987</span>
+            Followers
+          </p>
+          <span>
+            <img src="./images/icon-up.svg">
+            12 Today
+          </span>
+        </article>  
+
+        <article class="card twitter"> 
+          <span class="username">
+            <img src="./images/icon-twitter.svg">
+            @nathanf
+          </span>
+          <p class="count-followers">
+            <span>1044</span>
+            Followers
+          </p>
+          <span>
+            <img src="./images/icon-up.svg">
+            99 Today
+          </span>
+        </article>  
+
+        <article class="card instagram"> 
+          <span class="username">
+            <img src="./images/icon-instagram.svg">
+            @realnathanf
+          </span>
+          <p class="count-followers">
+            <span>11k</span>
+            Followers
+          </p>
+          <span>
+            <img src="./images/icon-up.svg">
+            1099 Today
+          </span>
+        </article>
+        
+        <article class="card youtube"> 
+          <span class="username">
+            <img src="./images/icon-youtube.svg">
+            Nathan F.
+          </span>
+          <p class="count-followers">
+            <span>8239</span>
+            Subscribers
+          </p>
+          <span>
+            <img src="./images/icon-down.svg">
+            144 Today
+          </span>
+        </article>  
+
+      </section>
+
+
+
+    </main>
   </div>
 
  <!--
 
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
 
 
 
