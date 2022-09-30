@@ -78,6 +78,7 @@ main .followers {
     top: 0;
 }
 
+/*Setting border colors for followers card*/
 .card.facebook::before {
     background: var(--Facebook);
 }
@@ -94,6 +95,51 @@ main .followers {
     background: var(--YouTube);
 }
 
+/*Setting username information*/
 .card .username {
+    display: flex;
+    justify-content: center;
+    color: var(--ColorDarkLight);
+}
 
+.card .username img {
+    margin-right: 10px;
+}
+
+/*Setting followers label*/
+.card .count-followers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 25px;
+    color: var(--ColorDarkLight);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+
+/*Setting followers qty information */
+.card .count-followers span {
+    color: var(--ColorDark);
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: -3px;
+}
+
+/*Setting 'XX' Today part*/
+.card span {
+    display: flex;
+    align-items: center;
+    color: var(--LimeGreen);
+    font-weight: 700;
+}
+
+/*To make red Youtube Today part*/
+.card span.down {
+    color: var(--BrightRed);
+}
+
+/*To put some space between the arrow and the word 'Today' */
+.card span img {
+    margin-right: 5px;
 }
