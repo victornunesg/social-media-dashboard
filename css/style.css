@@ -49,7 +49,7 @@ header .toggle-mode .btn-toggle::before {
     background: var(--BgLight);
 }
 
-main .followers {
+main .followers, .grid-overview {
     display: grid; /*Using grid to make it easier align the cards*/
     grid-template-columns: 1fr 1fr 1fr 1fr; /*1fr is automatic, all cards will be using the same space*/
     grid-gap: 30px; /*Defining space between cards*/
@@ -117,7 +117,6 @@ main .followers {
     text-transform: uppercase;
 }
 
-
 /*Setting followers qty information */
 .card .count-followers span {
     color: var(--ColorDark);
@@ -142,4 +141,33 @@ main .followers {
 /*To put some space between the arrow and the word 'Today' */
 .card span img {
     margin-right: 5px;
+}
+
+main .overview {
+    margin-top: 50px;
+}
+
+main .overview h2{
+    color: var(--ColorDark);
+    font-size: 1.7em;
+}
+
+main .grid-overview {
+    margin-top: 30px;
+}
+
+
+main .grid-overview span {
+    color: var(--ColorDarkLight)
+}
+
+.tittle-card {
+    display: flex;
+    margin-bottom: 20px;  
+}
+
+
+.text-card {
+    display: flex;
+    margin-bottom: 20px;  
 }
