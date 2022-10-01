@@ -21,14 +21,15 @@
 }
 
 /*Defining colors when Body contains a Dark class*/
-body.dark{
+body.dark {
+    --ColorDark: hsl(0, 0%, 100%);
+    --ColorDarkLight: hsl(228, 34%, 66%);
     --ToggleBtnDark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     --BgLight: hsl(230, 17%, 14%);
     --BgLightTop: hsl(232, 19%, 15%);
     --BgLightCard: hsl(228, 28%, 20%);
     --BgLightCardHover: hsl(228, 26%, 26%);
-    --ColorDark: hsl(0, 0, 100%);
-    --ColorDarkLight: hsl(228, 34%, 66%);
+
 }
 
 /*Resetting borders, eliminating them for all elements*/
@@ -49,4 +50,6 @@ body{
 body .container{
     width: 80%;
     margin: 0 auto;
+    height: 100%;
+    padding: 0;
 }

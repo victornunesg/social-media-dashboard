@@ -7,7 +7,7 @@ header {
 
 /*Changing color of "Social Media Dashboard" title*/
 header .title-box .title {
-    color: var(--ColorDark)
+    color: var(--ColorDark);
 }
 
 /*Changing color and setting bold in subtitle*/
@@ -26,11 +26,11 @@ header .toggle-mode {
 }
 
 /*Setting the toggle button*/
-header .toggle-mode .btn-toggle {
+header .toggle-mode input[type=checkbox] {
     -webkit-appearance: none; /*Removing button layout, eliminating the check box visual*/
     width: 90px;
     height: 40px;
-    border-radius: 50px; /*Making the border rounded*/
+    border-radius: 100px; /*Making the border rounded*/
     margin-left: 20px;
     background: var(--ToggleBtnDark);
     cursor: pointer; /*Setting mouse cursos as a hand while on the button*/
@@ -39,17 +39,24 @@ header .toggle-mode .btn-toggle {
 }
 
 /*Setting the toggle circle inside the toggle button*/
-header .toggle-mode .btn-toggle::before {
-    position: absolute; /*To set position inside in the toggle button*/
+header .toggle-mode input[type=checkbox]::before {
     content: ''; /*Nothing will be added inside the circle*/
     height: 40px;
     width: 40px;
-    transform: scale(0.8); /*Setting the scale as 80% to reduce it size*/
     border-radius: 50px; /*Making the border rounded*/
+    transform: translateX(50px) scale(0.8); /*Setting the scale as 80% to reduce it size*/
+    transition: 0.3s;
     background: var(--BgLight);
+    position: absolute; /*To set position inside in the toggle button*/
 }
 
-main .followers, .grid-overview {
+header .toggle-mode input[type=checkbox]:checked::before {
+    transform: translateX(0) scale(0.8);
+    
+}
+
+main .followers,
+main .grid-overview {
     display: grid; /*Using grid to make it easier align the cards*/
     grid-template-columns: 1fr 1fr 1fr 1fr; /*1fr is automatic, all cards will be using the same space*/
     grid-gap: 30px; /*Defining space between cards*/
@@ -67,8 +74,12 @@ main .followers, .grid-overview {
     position: relative; /*Same logic used in the toggle button*/
 }
 
+.card:hover {
+    background: var(--BgLightCardHover);
+}
+
 /*This pseud element will be the little top border of each social media card*/
-.card::before {
+main .followers .card::before {
     position: absolute;
     content: '';
     height: 5px;
@@ -144,7 +155,7 @@ main .followers, .grid-overview {
 }
 
 main .overview {
-    margin-top: 50px;
+    margin-top: 35px;
 }
 
 main .overview h2{
@@ -152,22 +163,40 @@ main .overview h2{
     font-size: 1.7em;
 }
 
-main .grid-overview {
+.grid-overview {
+    margin-top: 20px 0;
+}
+
+.grid-overview .card .tittle-card {
+    margin-bottom: 20px;  
+}
+
+.grid-overview .card .tittle-card span {
+    font-size: 1.1em;
+    color: var(--ColorDarkLight);  
+}
+
+.grid-overview .card .tittle-card,
+.grid-overview .card .text-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.grid-overview .card .text-card {
+    align-items: baseline;
+}
+
+.grid-overview .card .text-card p {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: var(--ColorDark);
+}
+
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    color: white;
     margin-top: 30px;
-}
-
-
-main .grid-overview span {
-    color: var(--ColorDarkLight)
-}
-
-.tittle-card {
-    display: flex;
-    margin-bottom: 20px;  
-}
-
-
-.text-card {
-    display: flex;
-    margin-bottom: 20px;  
 }
