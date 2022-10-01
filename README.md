@@ -4,7 +4,8 @@
 
 ## About the project
 
-This is a challenge from the FrontEnd Challenge website (https://www.frontendmentor.io/home). 
+This is a challenge from the FrontEnd Challenge website (https://www.frontendmentor.io/home).
+
 The objective is to build out this Social Media Dashboard and get it looking as close to the design as possible.
 
 The users should be able to:
@@ -14,6 +15,7 @@ The users should be able to:
 - Toggle color theme to their preference
 
 To do this challenge, I used HTML, CSS and JavaScript.
+
 **Thanks for checking out this front-end coding!**
 
 
